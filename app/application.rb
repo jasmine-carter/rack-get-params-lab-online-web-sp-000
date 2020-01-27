@@ -20,6 +20,8 @@ class Application
       item = req.params["item"]
       if @@items.include?("#{item}")
         @@cart << item
+      else
+        resp.write "That item is not in the Items List."
       end
 
     elsif req.path.match(/cart/)
