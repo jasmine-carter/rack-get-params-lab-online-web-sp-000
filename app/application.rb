@@ -20,6 +20,7 @@ class Application
       item = req.params["item"]
       if @@items.include?("#{item}")
         @@cart << item
+        resp.write "added #{item}"
       else
         resp.write "That item is not in the Items List."
       end
