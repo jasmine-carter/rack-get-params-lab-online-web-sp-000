@@ -22,7 +22,7 @@ class Application
         @@cart << item
         resp.write "added #{item}"
       else
-        resp.write "That item is not in the Items List."
+        resp.write "We don't have that item"
       end
 
     elsif req.path.match(/cart/)
