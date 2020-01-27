@@ -22,7 +22,7 @@ class Application
       else
         @@cart.each do |item|
           resp.write "#{item}\n"
-        end
+      end
     else
       resp.write "Path Not Found"
     end
